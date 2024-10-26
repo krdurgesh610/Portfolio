@@ -9,6 +9,8 @@ import spring from "../assets/spring.png";
 import tailwind from "../assets/tailwind.png";
 import sql from "../assets/sql.png";
 import github from "../assets/github.png";
+import mongoDB from "../assets/mongoDB.png";
+import expressJS from "../assets/expressJS.png";
 
 function Skills() {
   const skills = [
@@ -71,6 +73,18 @@ function Skills() {
       src: sql,
       title: "SQL",
       style: "shadow-blue-400",
+    },
+    {
+      id: 11,
+      src: mongoDB,
+      title: "MongoDB",
+      style: "shadow-green-400",
+    },
+    {
+      id: 12,
+      src: expressJS,
+      title: "ExpressJs",
+      style: "shadow-gray-400",
     },
   ];
   return (
