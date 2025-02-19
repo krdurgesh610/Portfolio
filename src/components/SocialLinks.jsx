@@ -8,41 +8,39 @@ function SocialLinks() {
     {
       id: 1,
       label: "Linkedin",
-      icon: <FaLinkedin size={30} />,
+      icon: <FaLinkedin size={25} />,
       href: "https://www.linkedin.com/in/durgesh99dk/",
-      style: "rounded-tr-md",
     },
     {
       id: 2,
       label: "GitHub",
-      icon: <FaGithub size={30} />,
+      icon: <FaGithub size={25} />,
       href: "https://github.com/krdurgesh610",
     },
     {
       id: 3,
       label: "Mail",
-      icon: <IoMail size={30} />,
+      icon: <IoMail size={25} />,
       href: "mailto:durgeshkr610@gmail.com",
     },
     {
       id: 4,
       label: "Resume",
-      icon: <BsFillPersonLinesFill size={30} />,
+      icon: <BsFillPersonLinesFill size={25} />,
       href: "Durgesh_Kr_Thakur.pdf",
-      style: "rounded-br-md",
       download: true,
     },
   ];
 
   return (
     <>
-      {/* Desktop View (Fixed Side Panel) */}
+      {/* Desktop View (Left Sidebar) */}
       <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
         <ul>
-          {links.map(({ id, label, icon, href, style, download }) => (
+          {links.map(({ id, label, icon, href, download }) => (
             <li
               key={id}
-              className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500 ${style}`}
+              className="flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500"
             >
               <a
                 href={href}
@@ -58,8 +56,8 @@ function SocialLinks() {
         </ul>
       </div>
 
-      {/* Mobile View (Bottom Nav) */}
-      <div className="lg:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-xl shadow-lg p-2 flex justify-around w-[90%]">
+      {/* Mobile View (Fixed Bottom Navbar) */}
+      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-gray-800 py-3 flex justify-around items-center shadow-md">
         {links.map(({ id, icon, href, download }) => (
           <a
             key={id}
