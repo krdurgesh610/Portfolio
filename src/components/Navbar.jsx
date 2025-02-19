@@ -56,12 +56,16 @@ function Navbar() {
         <Link to="home" smooth duration={500} className="cursor-pointer">
           <h1
             className="font-signature text-5xl ml-2 cursor-pointer"
-            onClick={() => setActiveLink("home")} // Set to default link on click
+            onClick={() => {
+              setActiveLink("home");
+              setNav(false); // Close menu on click
+            }}
           >
             Durgesh
           </h1>
         </Link>
 
+        {/* Desktop Menu */}
         <ul className="hidden md:flex">
           {links.map(({ id, link }) => (
             <li key={id} className="relative px-4 cursor-pointer capitalize font-medium">
@@ -118,10 +122,12 @@ function Navbar() {
           ))}
         </ul>
 
+        {/* Mobile Menu Button */}
         <div onClick={() => setNav(!nav)} className="cursor-pointer pr-4 z-10 text-white md:hidden">
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
 
+        {/* Mobile Menu */}
         {nav && (
           <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white">
             {links.map(({ id, link }) => (
@@ -165,7 +171,10 @@ function Navbar() {
                     smooth
                     duration={500}
                     className="relative cursor-pointer"
-                    onClick={() => setActiveLink(link)}
+                    onClick={() => {
+                      setActiveLink(link);
+                      setNav(false); // Close menu on click
+                    }}
                   >
                     {link}
                     <span
