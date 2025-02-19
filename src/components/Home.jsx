@@ -64,25 +64,6 @@ function Home() {
           Show Resume
         </a>
       </div>
-
-
-          {/* <div className="flex space-x-4">
-            <a
-              href="/Durgesh_Kr_Thakur.pdf"
-              download="Durgesh_Kr_Thakur.pdf"
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              Download Resume
-            </a>
-            <a
-              href="/Durgesh_Kr_Thakur.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-500 to-pink-500 cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              Show Resume
-            </a>
-          </div> */}
         </div>
         <div className="flex justify-end w-full mt-8 md:mt-0 md:w-auto md:ml-10">
           <img
